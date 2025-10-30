@@ -1,0 +1,136 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	background: linear-gradient(140deg, #0f172a 0%, #1e293b 45%, #111826 100%);
+	color: #f8fafc;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+}
+
+.app {
+	width: min(640px, 100%);
+	display: grid;
+	gap: 1.75rem;
+	text-align: center;
+}
+
+.header h1 {
+	font-size: 2.25rem;
+	letter-spacing: 0.04em;
+}
+
+.subtitle {
+	color: #cbd5f5;
+	font-size: 1.5rem;
+	margin-top: 0.5rem;
+}
+
+.card {
+	background: rgba(15, 23, 42, 0.8);
+	border: 1px solid rgba(148, 163, 184, 0.35);
+	border-radius: 20px;
+	padding: 2.25rem 2rem;
+	backdrop-filter: blur(6px);
+	box-shadow: 0 26px 48px rgba(8, 18, 33, 0.5);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 30px 58px rgba(7, 15, 29, 0.55);
+}
+
+.quote {
+	font-size: 1.5rem;
+	line-height: 1.7;
+}
+
+.author {
+	display: block;
+	margin-top: 1.5rem;
+	font-size: 1.1rem;
+	color: #94a3b8;
+}
+
+.controls {
+	display: flex;
+	gap: 0.75rem;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.filter {
+	border: 1px solid rgba(148, 163, 184, 0.35);
+	border-radius: 999px;
+	background: transparent;
+	color: inherit;
+	padding: 0.65rem 1.3rem;
+	cursor: pointer;
+	font-size: 0.95rem;
+	transition: background 0.25s ease, transform 0.2s ease, border-color 0.25s ease;
+}
+
+.filter[aria-pressed="true"] {
+	background: #38bdf8;
+	color: #0f172a;
+	border-color: #38bdf8;
+}
+
+.filter:focus-visible {
+	outline: 2px solid #facc15;
+	outline-offset: 3px;
+}
+
+.filter:hover {
+	transform: translateY(-2px);
+}
+
+.shuffle {
+	justify-self: center;
+	padding: 0.85rem 2.2rem;
+	border-radius: 999px;
+	border: none;
+	cursor: pointer;
+	background: #38bdf8;
+	color: #0f172a;
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.shuffle:hover {
+	background: #0ea5e9;
+	transform: translateY(-1px);
+}
+
+.shuffle:focus-visible {
+	outline: 2px solid #facc15;
+	outline-offset: 3px;
+}
+
+.shuffle:active {
+	transform: translateY(1px);
+}
+
+@media (max-width: 600px) {
+	body {
+		padding: 1.5rem;
+	}
+
+	.card {
+		padding: 2rem 1.5rem;
+	}
+
+	.quote {
+		font-size: 1.3rem;
+	}
+}

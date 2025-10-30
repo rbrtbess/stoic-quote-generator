@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stoic Quotes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <h1>Stoic Quote Randomizer</h1>
+            <p class="subtitle">Choose your mentor and reflect</p>
+        </header>
+
+        <main class="card" aria-live="polite">
+            <blockquote id="quote" class="quote">“You have power over your mind - not outside events.”</blockquote>
+            <cite id="author" class="author">— Marcus Aurelius</cite>
+        </main>
+
+        <nav class="controls" aria-label="Select a Stoic">
+            <button class="filter" data-philosopher="aurelius" aria-pressed="true">Marcus Aurelius</button>
+            <button class="filter" data-philosopher="seneca" aria-pressed="false">Seneca</button>
+            <button class="filter" data-philosopher="epictetus" aria-pressed="false">Epictetus</button>
+        </nav>
+
+        <button class="shuffle" id="shuffle" type="button">New Insight</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
